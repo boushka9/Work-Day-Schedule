@@ -1,99 +1,35 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler
 
-## Your Task
+## Description
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+The purpose of this project was to create a simple application to allow users to plan out their work day hour by hour. While using this application, users needed to be able to visually tell the difference between hours that have already passed, the current hour, and upcoming hours. Additionally, when the user enters and saves items in a specific time, those items needed to persist in the correct hour even when the user refreshes the page. These functions were created using moment.js to set and compare the hours, and by using local storage with the time slot acting as the key and the users input as the value.
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+## Installation
 
-## User Story
+No Installation is necessary to use this application. The deployed page can be accessed at https://boushka9.github.io/free-lego-library/ .
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
 
-## Acceptance Criteria
+## Usage
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+Access the deployed project at  https://boushka9.github.io/free-lego-library/ .
 
-The following animation demonstrates the application functionality:
+When the page loads you will be presented with the title 'Work Day Scheduler' with a color key indicating which colors represent past, current, and upcoming hours. Below the color key is the current date.
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+<img src="./assets/imgs/title.png" alt="Work Day Schedular with date" width="400">
 
-## Grading Requirements
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+Scrolling down from the title you will see hourly rows starting at 8AM and ending at 5PM. To the right of each hour you can click to type in meeting reminders, to-do items, or other notes that you might need throught your work day. 
 
-This Challenge is graded based on the following criteria:
+<img src="./assets/imgs/hourly.png" alt="Past, current, and upcoming hours" width="400">
 
-### Technical Acceptance Criteria: 40%
+To save your text inputs, click on the star at the right end of each row you entered text into. (it will grow and change color as you hover over it). This will stop you from losing your inputs when you refresh the page.
 
-* Satisfies all of the above acceptance criteria plus the following:
+<img src="./assets/imgs/hover.png" alt="Save button when hoverd over by mouse" width="100">
 
-  * Uses a date utility library to work with date and time
+If you would like to clear all text fields simply scroll past the end of the hourly blocks to the green 'Clear All' button at the bottom of the page. Click the 'Clear All' page to clear your inputs and stop them from showing up when you refresh the page. 
 
-### Deployment: 32%
+<img src="./assets/imgs/clear.png" alt="'Clear All' button" width="150">
 
-* Application deployed at live URL
+## License
 
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+MIT
