@@ -5,12 +5,18 @@ $(document).ready(function () {
   //curent time will be judged 08-17
   let currentTime = moment().format("HH");
 
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
+  
+    $(document).ready(function (){
+      //listen for click on saveBtn
+      $(".saveBtn").on("click", function (){
+        //userInput = the text that the user inputed into the textarea (which is sibling to savebtn)
+        let userInput = $(this).siblings(".description").val();
+        //time attr = parent of savebtn and hour id = split by -
+        let inputTime = $(this).parent().attr("id").split("-")[1];
+        //save text/time to local storage
+        localStorage.setItem(userInput, inputTime);
+      })
+    })
 
     //for each class time-block, judge if the current time is = to <, or > than the current hour 
     $(".time-block").each(function () {
