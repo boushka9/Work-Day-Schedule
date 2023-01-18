@@ -18,7 +18,7 @@ When the page loads you will be presented with the title 'Work Day Scheduler' wi
 <img src="./assets/imgs/title.png" alt="Work Day Schedular with date" width="400">
 
 
-Scrolling down from the title you will see hourly rows starting at 8AM and ending at 5PM. To the right of each hour you can click to type in meeting reminders, to-do items, or other notes that you might need throught your work day. 
+Scrolling down from the title you will see hourly rows starting at 8AM and ending at 5PM. To the right of each hour you can click to type in meeting reminders, to-do items, or other notes that you might need throughout your work day. 
 
 <img src="./assets/imgs/hourly.png" alt="Past, current, and upcoming hours" width="400">
 
