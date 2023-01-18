@@ -18,8 +18,8 @@ $(document).ready(function () {
       })
     })
 
-    //for each class time-block, judge if the current time is = to <, or > than the current hour 
-    $(".time-block").each(function () {
+    //for each class hourly, judge if the current time is = to <, or > than the current hour 
+    $(".hourly").each(function () {
       let hourBlock = $(this).attr("id").split("-")[1];
 
       //remove/add classes for colorchange based on hour
@@ -50,6 +50,14 @@ $(document).ready(function () {
     $("#hour-15 .description").val(localStorage.getItem("15")); 
     $("#hour-16 .description").val(localStorage.getItem("16")); 
     $("#hour-17 .description").val(localStorage.getItem("17")); 
+
+    // clear all saved inputs
+    $(".clearBtn").click(function () {
+      //set text input to empty string
+      $(".description").val("");
+      //clear local storage so refresh remaines clear
+      localStorage.clear();
+    })
   
  
 });
