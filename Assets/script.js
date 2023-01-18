@@ -13,8 +13,8 @@ $(document).ready(function () {
         let userInput = $(this).siblings(".description").val();
         //time attr = parent of savebtn and hour id = split by -
         let inputTime = $(this).parent().attr("id").split("-")[1];
-        //save text/time to local storage
-        localStorage.setItem(userInput, inputTime);
+        //save time/text to local storage (time=key so input=value)
+        localStorage.setItem(inputTime, userInput);
       })
     })
 
@@ -40,13 +40,18 @@ $(document).ready(function () {
       }
     })
 
-
+    //get saved text value  from local storage and save to coresponding time slot (time "HH" = key)
+    $("#hour-09 .description").val(localStorage.getItem("09")); 
+    $("#hour-10 .description").val(localStorage.getItem("10")); 
+    $("#hour-11 .description").val(localStorage.getItem("11")); 
+    $("#hour-12 .description").val(localStorage.getItem("12")); 
+    $("#hour-13 .description").val(localStorage.getItem("13")); 
+    $("#hour-14 .description").val(localStorage.getItem("14")); 
+    $("#hour-15 .description").val(localStorage.getItem("15")); 
+    $("#hour-16 .description").val(localStorage.getItem("16")); 
+    $("#hour-17 .description").val(localStorage.getItem("17")); 
   
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+ 
 });
 
 
